@@ -11,8 +11,10 @@
 
     <img src="assets/img/Pokemon-logo-7714F3CEA6-seeklogo.com.png" alt="Foto do logo de Pokemon">
 
+    <br><br>
+
 <body>
-    <ul>
+    <ul id="menu">
         <li><a href="index.html"> Home </a></li>
         <li><a href="dream-team.html"> Dream Team</a></li>
         <li><a href="contato.html"> Contato </a></li>        
@@ -20,29 +22,65 @@
 
     <h1 class="center">Entre em contato comigo!!!</h1>
 
-    <form>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome">
-        <br><br>
-        <label for="e-mail">E-mail:</label><br>
-        <input type="e-mail" id="e-mail">
-        <br><br>
-        <label for="assunto">Assunto:</label><br>
-        <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
-        <br><br>
-        <button>Enviar</button>
-    </form>
+    <div class="container mb-50">
+        <div>
+            <h2>Mande uma mensagem</h2>
+            <form>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id = "txtNome"></div>
 
-    <h2>Endereço:</h2>
+                <br>
 
-    <p>
-        Av. Celso Garcia, 5085
-    </p>
-    <p>
-        São Paulo-SP
-    </p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id = "txtEmail"></div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9891620181056!2d-46.568307470527515!3d-23.532892217466934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5efaaf7b05ef%3A0x8e4082c59d4ee7b7!2sAv.%20Celso%20Garcia%2C%205085%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003063-000!5e0!3m2!1spt-BR!2sbr!4v1680642703276!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <br><br>
+                <label for="assunto">Assunto:</label><br>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id = "txtAssunto"></div>
+                <br>
+                <br>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+
+        <div class="ml-50">
+            
+            <p>Av. Celso Garcia, 5085</p>
+            <p>São Paulo-SP</p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9891620181056!2d-46.568307470527515!3d-23.532892217466934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5efaaf7b05ef%3A0x8e4082c59d4ee7b7!2sAv.%20Celso%20Garcia%2C%205085%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003063-000!5e0!3m2!1spt-BR!2sbr!4v1680642703276!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id = "mapa"></iframe>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        
+        <div class="container">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img class="tm-social p-30" src="assets/img/icones/facebook.png" alt="Logo do Facebook">
+            </a>
+            
+            <a href="https://www.instagram.com/" target="_blank">
+                <img class="tm-social p-30" src="assets/img/icones/instagram.png" alt="Logo do Instagram">
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img class="tm-social p-30" src="assets/img/icones/linkedin.png" alt="Logo do Linkedin">
+            </a>
+            
+        </div>
+
+        <p class="center">
+            Todos os direitos reservados: Thiago Ferreira &copy
+        </p>
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
